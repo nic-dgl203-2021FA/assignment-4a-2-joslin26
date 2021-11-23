@@ -11,8 +11,8 @@
 }
 
 body {
-  background-color: #709b90;
-  font-family: Helvetica, Arial, sans-serif;
+  background: #709b90;
+  color: Helvetica, Arial, sans-serif;
 }
 
 .container {

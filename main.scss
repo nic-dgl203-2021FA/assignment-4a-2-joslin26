@@ -1,3 +1,6 @@
+@import './resets';
+@import './variables';
+
 :root {
     box-sizing: border-box;
   }
@@ -9,8 +12,8 @@
   }
 
   body {
-    background-color: #709b90;
-    font-family: Helvetica, Arial, sans-serif;
+    background:$primary-color;
+    color: $font-family;
   }
 
   .container {
