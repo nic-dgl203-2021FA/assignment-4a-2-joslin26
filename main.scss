@@ -5,11 +5,25 @@
     @return map-get($text-size, $text-name);
 }
 
-@mixin flexCenter($direction) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
+@mixin navLinks($navLinks: true) {
+    @if $navLinks {
+        display: block;
+        padding: .5em 1em;
+        background-color: #cc6b5a;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+@mixin button($cta-button: true) {
+    @if $cta-button {
+        display: block;
+        background-color: $secondary-color;
+        color: $box-color;
+        padding: .5em 1em;
+        text-decoration: none;
+    }
 }
 
   body {
@@ -76,11 +90,7 @@
     li {
         margin-top: 0;
         a {
-            display: block;
-            padding: .5em 1em;
-            background-color: #cc6b5a;
-            color: white;
-            text-decoration: none;
+            @include navLinks($navLinks: true);
         }
     }
     li + li {
@@ -90,8 +100,6 @@
         margin-left: auto;
     }
   }
-
-
 
 
   .login-form {
@@ -144,9 +152,5 @@
 
 
   .cta-button {
-    display: block;
-    background-color: $secondary-color;
-    color: $box-color;
-    padding: .5em 1em;
-    text-decoration: none;
+    @include button($cta-button: true);
   }
